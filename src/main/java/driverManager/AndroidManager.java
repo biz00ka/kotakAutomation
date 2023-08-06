@@ -15,12 +15,13 @@ public final class AndroidManager {
 	
 	private AndroidManager() {}
 	
-	public static AppiumDriver getDriver(String browser, String portNumber, String deviceName) throws MalformedURLException
+	public static AppiumDriver getDriver(String browser, String portNumber, String platformVersion, String deviceName) throws MalformedURLException
 	{
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setPlatformName(BrowserType.Android.name()); //optional
 		options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);//optional
 		options.setDeviceName(deviceName);
+		options.setPlatformVersion(platformVersion);
 		options.setCapability(UiAutomator2Options.APP_PACKAGE_OPTION, LocalConfigFactory.getConfigValue().appPackage());
 		options.setCapability(UiAutomator2Options.APP_ACTIVITY_OPTION, LocalConfigFactory.getConfigValue().appActivity());
 		options.setApp(System.getProperty("user.dir") + LocalConfigFactory.getConfigValue().androidAppPath());

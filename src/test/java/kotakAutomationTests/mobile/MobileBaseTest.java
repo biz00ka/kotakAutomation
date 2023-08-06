@@ -16,12 +16,12 @@ public class MobileBaseTest {
 	private String browser_Name;
 	
 	
-	@Parameters({"browserName","deviceName","portNumber"})
+	@Parameters({"browserName","deviceName","platformVersion","portNumber"})
 	@BeforeMethod
-	public void setup(String browserName, String deviceName,String portNumber) throws MalformedURLException
+	public void setup(String browserName, String deviceName,String platformVersion, String portNumber) throws MalformedURLException
 	{
 			browser_Name= browserName;
-			appiumDriver=DriverManager.setup(browserName,portNumber,deviceName);
+			appiumDriver=DriverManager.setup(browserName,portNumber,platformVersion,deviceName);
 			DriverManager.setDriver(appiumDriver);
 		
 	}

@@ -6,7 +6,7 @@
 
 		<parameter name="browserName" value="Chrome" />
 		<classes >
-			<class name="kotakAutomationTests.web.WebDemoTest" /> 
+			<class name="kotakAutomationTests.web.WebDemoTest" />
 		</classes>
 	</test>
 
@@ -15,9 +15,10 @@
 
 		<parameter name="browserName" value="android" />
 		<parameter name="deviceName" value="16de229e" />
+		<parameter name="platformVersion" value="10" />
 		<parameter name="portNumber" value="4725" />
 		<classes >
-			<class name="kotakAutomationTests.mobile.AndroidDemoTest" /> 
+			<class name="kotakAutomationTests.mobile.AndroidDemoTest" />
 		</classes>
 	</test>
  	
@@ -25,6 +26,7 @@
 
 		<parameter name="browserName" value="ios" />
 		<parameter name="deviceName" value="iPhone 14" />
+		<parameter name="platformVersion" value="16.0" />
 		<parameter name="portNumber" value="4724" />
 		<classes >
 			<class name="kotakAutomationTests.mobile.IosDemoTest" />

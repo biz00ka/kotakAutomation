@@ -51,7 +51,7 @@ public class DriverManager {
 		threadLocal.set(driver);
 	}
 
-	public static AppiumDriver setup(String browser, String portNumber, String deviceName) throws MalformedURLException
+	public static AppiumDriver setup(String browser, String portNumber,String platformVersion, String deviceName) throws MalformedURLException
 	{
 		if(browser.equalsIgnoreCase(BrowserType.Android.name())) {
 			// Below two lines of code to be commented if Appium service is unable to launch Appium server.
@@ -59,7 +59,7 @@ public class DriverManager {
 				AppiumServerUtils.startAppiumService(portNumber);
 			// Above two lines of code to be commented if Appium service is unable to launch Appium server.
 			
-			driver =AndroidManager.getDriver(browser, portNumber, deviceName);
+			driver =AndroidManager.getDriver(browser, portNumber,platformVersion, deviceName);
 		}
 		else if(browser.equalsIgnoreCase(BrowserType.iOS.name()))
 		{
@@ -68,7 +68,7 @@ public class DriverManager {
 				AppiumServerUtils.startAppiumService(portNumber);
 			// Above two lines of code to be commented if Appium service is unable to launch Appium server.
 						
-			driver= IosManager.getDriver(browser, portNumber, deviceName);
+			driver= IosManager.getDriver(browser, portNumber,platformVersion, deviceName);
 		}
 
 		return driver;
