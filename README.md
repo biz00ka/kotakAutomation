@@ -28,6 +28,7 @@ https://chromedriver.chromium.org/downloads  >> click on Stable.
 
 Adding some screenshots for reference.
 
+
 <img width="1437" alt="chrome binary link" src="https://github.com/biz00ka/kotakAutomation/assets/35526173/7f900d21-31fd-49a6-9d3b-30265d5bb728">
 
 
