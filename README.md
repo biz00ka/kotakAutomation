@@ -27,6 +27,7 @@ Either run testNG.xml or can run `mvn clean test`
 https://chromedriver.chromium.org/downloads  >> click on Stable.
 
 Adding some screenshots for reference.
-![](/Users/siddharth/Desktop/chrome binary link.png)
 
-![](/Users/siddharth/Desktop/chromedriver latest release note.png)
+![](/Users/siddharth/kotakAutomation/src/test/resources/image_files/chrome binary link.png)
+
+![](/Users/siddharth/kotakAutomation/src/test/resources/image_files/chromedriver latest release note.png)
