@@ -15,6 +15,10 @@ An automation framework for website, Android app and iOS App.
 
 Either run testNG.xml or can run `mvn clean test`
 
+If, Appium service is unable to launch Appium server, 
+Refer utils/DriverManger.class to comment the lines and manually start the appium with command 
+`appium -p <portNumber>`.
+
 ## Changes to Be made
 
 1. Change device name and platform version in testNG.xml file to run real device/emulator for android and iOS.
