@@ -28,6 +28,6 @@ https://chromedriver.chromium.org/downloads  >> click on Stable.
 
 Adding some screenshots for reference.
 
-![](/Users/siddharth/kotakAutomation/src/test/resources/image_files/chrome binary link.png)
+(![plot](./src/test/resources/image_files/chrome binary link.png))
 
-![](/Users/siddharth/kotakAutomation/src/test/resources/image_files/chromedriver latest release note.png)
+(![plot](./src/test/resources/image_files/chromedriver latest release note.png))
