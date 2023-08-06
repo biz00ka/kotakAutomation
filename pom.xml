@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.kotak</groupId>
+  <artifactId>kotakAutomation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>kotakMobileAutomation</name>
+
+<properties>
+		<mavenCompilerPlugin.version>3.11.0</mavenCompilerPlugin.version>
+		<mavenSurefirePlugin.version>3.1.2</mavenSurefirePlugin.version>
+		<mavenSitePlugin.version>3.12.1</mavenSitePlugin.version>
+		<mavenProjectPlugin.version>3.4.1</mavenProjectPlugin.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<appiumJava.version>8.5.1</appiumJava.version>
+		<testNG.version>7.7.1</testNG.version>
+		<seleniumJava.version>4.11.0</seleniumJava.version>
+		<aeonbits.version>1.0.4</aeonbits.version>
+		<assertj.version>3.24.2</assertj.version>
+</properties>
+
+<build>
+		
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${mavenCompilerPlugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${mavenSurefirePlugin.version}</version>
+				<configuration> <!-- Suite testng xml file to consider for test execution -->
+					<suiteXmlFiles>
+						<suiteXmlFile>testNG.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>${mavenSitePlugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>${mavenProjectPlugin.version}</version>
+			</plugin>
+		</plugins>
+	</build>
+
+
+<dependencies>
+        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appiumJava.version}</version>
+        </dependency>
+
+        <dependency>
+    		<groupId>org.testng</groupId>
+    		<artifactId>testng</artifactId>
+    		<version>${testNG.version}</version>
+    		<scope>test</scope>
+		</dependency>
+		<dependency>
+    		<groupId>org.seleniumhq.selenium</groupId>
+    		<artifactId>selenium-java</artifactId>
+    		<version>${seleniumJava.version}</version>
+		</dependency>
+
+
+		<dependency>
+    		<groupId>org.aeonbits.owner</groupId>
+    		<artifactId>owner</artifactId>
+    		<version>${aeonbits.version}</version>
+		</dependency>
+
+
+		<dependency>
+    		<groupId>org.assertj</groupId>
+    		<artifactId>assertj-core</artifactId>
+    		<version>${assertj.version}</version>
+    		<scope>test</scope>
+		</dependency>
+
+    </dependencies>
+</project>

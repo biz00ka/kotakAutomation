@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="New Kotak tests" parallel="tests" thread-count="3">
+
+	 <test name="mWeb Test">
+
+		<parameter name="browserName" value="Chrome" />
+		<classes >
+			<class name="kotakAutomationTests.web.WebDemoTest" /> 
+		</classes>
+	</test>
+
+
+     <test name="Android Test">
+
+		<parameter name="browserName" value="android" />
+		<parameter name="deviceName" value="16de229e" />
+		<parameter name="portNumber" value="4725" />
+		<classes >
+			<class name="kotakAutomationTests.mobile.AndroidDemoTest" /> 
+		</classes>
+	</test>
+ 	
+	<test name="iOS Test">
+
+		<parameter name="browserName" value="ios" />
+		<parameter name="deviceName" value="iPhone 14" />
+		<parameter name="portNumber" value="4724" />
+		<classes >
+			<class name="kotakAutomationTests.mobile.IosDemoTest" />
+		</classes>
+	</test>
+
+</suite> 
